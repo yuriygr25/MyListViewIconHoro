@@ -2,6 +2,7 @@ package com.example.yura.mylistviewiconhoro;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,6 +87,8 @@ public class ListViewWithIconsActivity extends ListActivity {
 
             TextView date = (TextView) convertView.findViewById(R.id.date);
             date.setText(mDate[position]);
+            convertView.setBackgroundColor((position & 1) == 1 ? Color.WHITE : Color.LTGRAY);
+
             return convertView;
         }
     } // end myAdapter
