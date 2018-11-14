@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/astrology_ico"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/astrology_ico"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListViewWithIconsActivity"></activity>
-
+        <activity android:name=".DetailActivity"></activity>
 
     </application>
 

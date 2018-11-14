@@ -2,6 +2,7 @@ package com.example.yura.mylistviewiconhoro;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -48,7 +49,17 @@ public class ListViewWithIconsActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         String selection = mAdapter.getString(position);
-        Toast.makeText(this, selection, Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent();
+        intent.setClass(ListViewWithIconsActivity.this, DetailActivity.class);
+
+        intent.putExtra("title", position);
+
+        //запускаем вторую активность
+        startActivity(intent);
+
+
+        //Toast.makeText(this, selection, Toast.LENGTH_LONG).show();
     }
 
     public class myAdapter extends BaseAdapter {
